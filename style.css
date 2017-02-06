@@ -1,0 +1,41 @@
+* {
+    box-sizing: border-box;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}
+
+.tacoContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: peachpuff;
+    width: 90vw;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+.pContent {
+    display: inline-block;
+    width: 90%;
+    /*align-self: center;*/
+}
+
+.buttonQuote {
+    display: flex;
+    justify-content: space-around;
+}
+
+#nextQuote {
+    font-size: 1.1em;
+}
+
+//image to include :https://unsplash.com/photos/qX9Ie7ieb1E
