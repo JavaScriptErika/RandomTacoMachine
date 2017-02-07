@@ -8,7 +8,7 @@ const $nextTaco = $('#nextTacoButton');
 
 //callback function for ajaxRequest() that gives a description of taco recipe
 //data is what is returned from the request as a JSON object
-function tacoSummary(data) {
+const tacoSummary = data => {
 	tacoObject = data;
 	let $tacoP = $('#tacoP');
 	let tacoDescription = "";
@@ -25,49 +25,48 @@ function tacoSummary(data) {
 } // end tacoSummary()
 
 //converts markdown to html formatting
-function tacoToHTML(htmlElement, tacoMdFormat) {
+const tacoToHTML = (htmlElement, tacoMdFormat) => {
 	const converter = new showdown.Converter();
 	let tacoConverted = converter.makeHtml(tacoMdFormat);
 	htmlElement.html(tacoConverted);
 }
 
 //grabs tacoObject to iterate through ingredients to tweet
-function tacoTweet(tacoIngredients) {
+const tacoTweet = tacoIngredients => {
 
 	const $twitterButton = $('#twitterButton');
 	let tacoName = "";
 
-	$.each(tacoIngredients, function (i) {
+	$.each(tacoIngredients, function (i, value) {
 
 		tacoName += this.name + ', ';
 	})
 
-	var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tacoName + "tacos");
+	let url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tacoName + "tacos");
 	console.log(url);
 
 	$twitterButton.attr('href', url);
 
 }
 //AJAX request with URL and callback function
-function ajaxRequest() {
-	$.getJSON(tacoAPI, tacoSummary);
-} //end ajaxRequest()
+ajaxRequest = () => $.getJSON(tacoAPI, tacoSummary);
+//end ajaxRequest()
 
 //when page loads, a recipe will already be available
-window.onload = function () {
+window.onload = () => {
 	ajaxRequest();
 	//hides the summary to begin with
 	$tacoFull.hide();
 }; //end onload event
 
-$nextTaco.on('click', function () {
+$nextTaco.on('click', () => {
 	ajaxRequest();
 	//hides summary when user clicks next taco button
 	$tacoFull.hide();
 }); // end click event
 
 
-$recipeButton.on('click', function () {
+$recipeButton.on('click', () => {
 	let fullRecipe = "";
 
 	$.each(tacoObject, function (i) {
