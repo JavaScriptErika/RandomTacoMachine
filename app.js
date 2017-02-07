@@ -37,39 +37,35 @@ const tacoTweet = tacoIngredients => {
 	const $twitterButton = $('#twitterButton');
 	let tacoName = "";
 
-	$.each(tacoIngredients, function (i, value) {
+	$.each(tacoIngredients, function () {
 
 		tacoName += this.name + ', ';
-	})
+	});
 
 	let url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tacoName + "tacos");
-	console.log(url);
-
 	$twitterButton.attr('href', url);
 
 }
 //AJAX request with URL and callback function
-ajaxRequest = () => $.getJSON(tacoAPI, tacoSummary);
+ajaxRequest = () => {
+
+	$.getJSON(tacoAPI, tacoSummary);
+	$tacoFull.hide();
+
+}
 //end ajaxRequest()
 
-//when page loads, a recipe will already be available
-window.onload = () => {
+//Self-executing anonymous function
+$(() => {
 	ajaxRequest();
-	//hides the summary to begin with
-	$tacoFull.hide();
-}; //end onload event
+});
 
-$nextTaco.on('click', () => {
-	ajaxRequest();
-	//hides summary when user clicks next taco button
-	$tacoFull.hide();
-}); // end click event
-
+$nextTaco.on("click", ajaxRequest);
 
 $recipeButton.on('click', () => {
 	let fullRecipe = "";
 
-	$.each(tacoObject, function (i) {
+	$.each(tacoObject, function () {
 
 		fullRecipe += this.recipe + '\n\n---\n';
 	});
