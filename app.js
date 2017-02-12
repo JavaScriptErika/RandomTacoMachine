@@ -11,11 +11,7 @@ const $nextTaco = $('#nextTacoButton');
 const tacoSummary = data => {
 	tacoObject = data;
 	let $tacoP = $('#tacoP');
-	let tacoDescription = `Feast upon a mighty taco packed with the flavors of <b>${tacoObject.seasoning.name}</b> and <b>${tacoObject.base_layer.name}</b>!
-		Don't forget the <b>${tacoObject.condiment.name}</b>.
-			Best part? It's all tucked away in <b>${tacoObject.shell.name}</b>,
-			topped off with <b>${tacoObject.mixin.name}</b>. `;
-
+	let tacoDescription = `Topped off with <b>${tacoObject.mixin.name}</b> and <b>${tacoObject.condiment.name}</b>, feast upon this mighty taco packed with <b>${tacoObject.base_layer.name}</b> and the flavors of <b>${tacoObject.seasoning.name}</b>! Best part? It's all tucked away in <b>${tacoObject.shell.name}</b>.`;
 
 	tacoToHTML($tacoP, tacoDescription);
 	tacoTweet(tacoObject);
