@@ -1,72 +1,69 @@
 const tacoAPI = "http://taco-randomizer.herokuapp.com/random/";
+//empty object initialized so when JSON object is returned, can be accessed globally
 let tacoObject = {};
+//element id is selected for full description of the recipe
 let $tacoFull = $('#tacoFull');
 const $recipeButton = $('#recipeButton');
 const $nextTaco = $('#nextTacoButton');
 
-
-function tacoSummary(data) {
+//callback function for ajaxRequest() that gives a description of taco recipe
+//data is what is returned from the request as a JSON object
+const tacoSummary = data => {
 	tacoObject = data;
 	let $tacoP = $('#tacoP');
-	let tacoDescription = "";
+	let tacoDescription = `Feast upon a mighty taco packed with the flavors of <b>${tacoObject.seasoning.name}</b> and <b>${tacoObject.base_layer.name}</b>!
+		Don't forget the <b>${tacoObject.condiment.name}</b>.
+			Best part? It's all tucked away in <b>${tacoObject.shell.name}</b>,
+			topped off with <b>${tacoObject.mixin.name}</b>. `;
 
-	tacoDescription += "A yummy taco with " + '<b>' + tacoObject.mixin.name + '</b> ';
-	tacoDescription += "and lots of flavor thanks to " + '<b>' + tacoObject.seasoning.name + '</b>. ';
-	tacoDescription += "Stuff your face with a big boy portion of " + '<b>' + tacoObject.base_layer.name + '</b>! ';
-	tacoDescription += 'Don\'t forget the ' + '<b>' + tacoObject.condiment.name + '</b>. ';
-	tacoDescription += "Best part? It's all tucked away in " + '<b>' + tacoObject.shell.name + '</b>.';
 
 	tacoToHTML($tacoP, tacoDescription);
 	tacoTweet(tacoObject);
 
 } // end tacoSummary()
 
-function tacoTweet(tacoObject) {
-
-	$twitterButton = $('#twitterButton');
-	let tacoName = "";
-
-	$.each(tacoObject, function (i) {
-
-		tacoName += this.name + ', ';
-	})
-
-	var url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tacoName + "tacos");
-	console.log(url);
-
-	$twitterButton.attr('href', url);
-
-}
-
-
-function tacoToHTML(htmlElement, tacoMdFormat) {
+//converts markdown to html formatting
+const tacoToHTML = (htmlElement, tacoMdFormat) => {
 	const converter = new showdown.Converter();
 	let tacoConverted = converter.makeHtml(tacoMdFormat);
 	htmlElement.html(tacoConverted);
 }
 
-function ajaxRequest() {
+//grabs tacoObject to iterate through ingredients to tweet
+const tacoTweet = tacoIngredients => {
+
+	const $twitterButton = $('#twitterButton');
+	let tacoName = "";
+
+	$.each(tacoIngredients, function () {
+
+		tacoName += this.name + ', ';
+	});
+
+	let url = 'https://twitter.com/intent/tweet?text=' + encodeURIComponent(tacoName + "tacos");
+	$twitterButton.attr('href', url);
+
+}
+//AJAX request with URL and callback function
+ajaxRequest = () => {
+
 	$.getJSON(tacoAPI, tacoSummary);
-
-} //end ajaxRequest()
-
-
-window.onload = function () {
-	ajaxRequest();
 	$tacoFull.hide();
 
-}; //end onload event
+}
+//end ajaxRequest()
 
-$nextTaco.on('click', function () {
+//Self-executing anonymous function
+$(() => {
 	ajaxRequest();
-	$tacoFull.hide();
-}); // end click event
+});
 
+$nextTaco.on("click", ajaxRequest);
 
-$recipeButton.on('click', function () {
+$recipeButton.on('click', () => {
 	let fullRecipe = "";
 
-	$.each(tacoObject, function (i) {
+	$.each(tacoObject, function () {
 
 		fullRecipe += this.recipe + '\n\n---\n';
 	});
