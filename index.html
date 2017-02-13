@@ -7,29 +7,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Taco Machine</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barrio|Open+Sans">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
     <!-- video -->
     <div class="homepage-hero-module">
-    <div class="video-container">
-        <div class="filter"></div>
+      <div class="video-container">
+        <div class="title-container">
+          <div class="filter">
+            <h1 class="title">Random Taco Machine</h1>
+            <h3 class="subtitle">Because every night is taco night</h3>
+          </div> <!-- end filter -->
+          <a href="#tacoGenerator"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <!-- end title-container -->
         <video autoplay loop class="fillWidth">
             <source src="video/MP4/Indoor-Market.mp4" type="video/mp4" />Your browser does not support the video tag. Please upgrade your browser.
             <source src="video/WEBM/Indoor-Market.webm" type="video/webm" />Your browser does not support the video tag. Please upgrade your browser.
             <source src="video/OGV/Indoor-Market.ogv" type="video/ogv" />Your browser does not support the video tag. Please upgrade your browser.
         </video>
-        <!-- <div class="poster hidden">
-            <img src="video/Snapshot/Indoor-Market.jpg" alt="">
-        </div> -->
+        <!-- <div class="poster">
+            <img src="video/Snapshot/Indoor-Market.jpg" alt=""> -->
+      </div>
     </div>
-</div>
-    <div class="wrapper">
-      <h1>Random Taco Machine</h1>
-      <h3>Because every night is taco night</h3>
+    </div>
+    <div id="tacoGenerator" class="wrapper">
+
+
       <div class="buttonQuote">
-        <a id="twitterButton">Tweet</a>
+        <a id="twitterButton"><i class="fa fa-twitter-square" aria-hidden="true"></i></a> 
         <button id="nextTacoButton">Next Taco</button>
       </div>
       <div class="tacoContainer" id="tacoDiv">

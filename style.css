@@ -1,41 +1,6 @@
 * {
     box-sizing: border-box;
-}
-
-.wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
-    text-align: center;
-}
-
-.tacoContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: peachpuff;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 1em;
-}
-
-.pContent {
-    display: inline-block;
-    width: 90%;
-    /*align-self: center;*/
-}
-
-.buttonQuote {
-    display: flex;
-    justify-content: space-around;
-}
-
-#nextQuote {
-    font-size: 1.1em;
+    font-family: 'Open Sans', sans-serif;
 }
 
 
@@ -73,7 +38,7 @@ h1 {
     position: absolute;
 }
 
-.video-container .filter {
+.video-container {
     z-index: 100;
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
@@ -88,4 +53,69 @@ h1 {
 
 .video-container video.fillWidth {
     width: 100%;
+}
+
+
+/*** End Video ***/
+
+
+/*** Header and subtitle ***/
+
+.title-container {
+    z-index: 1000;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+}
+
+.filter {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2em 0 .25em;
+}
+
+.title {
+    font-size: 4em;
+    font-family: 'Barrio', cursive;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.7em;
+    padding: 0 2em 0;
+    margin-bottom: 1em;
+}
+
+.title,
+.subtitle {
+    color: #ffc000;
+}
+
+.fa-arrow-down {
+    font-size: 2em;
+    margin-top: .5em;
+}
+
+
+/*** End header and subtitle ***/
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pContent {
+    display: inline-block;
+    width: 90%;
+    /*align-self: center;*/
+}
+
+.buttonQuote {
+    display: flex;
+    justify-content: space-around;
+}
+
+#nextQuote {
+    font-size: 1.1em;
 }
