@@ -92,8 +92,18 @@
     color: #ffc000;
 }
 
-.fa-arrow-down {
+
+/*** End header and subtitle ***/
+
+
+/*** Font Awesome ***/
+
+.fa-arrow-down,
+.fa-twitter-square {
     font-size: 2em;
+}
+
+.fa-arrow-down {
     margin-top: .5em;
 }
 
@@ -102,28 +112,29 @@
 }
 
 
-/*** End header and subtitle ***/
+/*** End Font Awesome ***/
+
+
+/*** Taco Generator***/
 
 .wrapper {
     width: 100%;
     display: flex;
     flex-direction: column;
-}
-
-.pContent {
-    display: inline-block;
-    width: 90%;
-    /*align-self: center;*/
+    margin-top: 2em;
 }
 
 .buttonQuote {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    width: 75%;
+    margin: auto;
 }
 
-#nextQuote {
+.nextTacoButton {
     font-size: 1.1em;
 }
 
-
+.pContent {
+    padding: 0 2em;
 }
