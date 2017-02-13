@@ -87,13 +87,18 @@
 }
 
 .title,
-.subtitle {
+.subtitle,
+.fa-arrow-down {
     color: #ffc000;
 }
 
 .fa-arrow-down {
     font-size: 2em;
     margin-top: .5em;
+}
+
+.fa-arrow-down:hover {
+    text-shadow: -1px 1px 8px #ffde79;
 }
 
 
@@ -118,4 +123,7 @@
 
 #nextQuote {
     font-size: 1.1em;
+}
+
+
 }
