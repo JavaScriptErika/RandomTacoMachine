@@ -98,6 +98,11 @@
 
 /*** Font Awesome ***/
 
+.fa-twitter-square,
+a:visited .fa-twitter-square {
+    color: #0099CC;
+}
+
 .fa-arrow-down,
 .fa-twitter-square {
     font-size: 2em;
@@ -109,6 +114,10 @@
 
 .fa-arrow-down:hover {
     text-shadow: -1px 1px 8px #ffde79;
+}
+
+.fa-twitter-square:hover {
+    text-shadow: 0px 0px 5px #9fffe7;
 }
 
 
@@ -131,8 +140,19 @@
     margin: auto;
 }
 
-.nextTacoButton {
+#nextTacoButton {
     font-size: 1.1em;
+    border-radius: 5%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: .5em 1em;
+    font-size: 16px;
+}
+
+#nextTacoButton:active {
+    background: #007004;
+    outline: none;
 }
 
 .pContent {
