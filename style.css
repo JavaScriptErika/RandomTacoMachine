@@ -1,37 +1,40 @@
-xp* {
-    box-sizing: border-box;
-    font-family: 'Open Sans', sans-serif;
+/*11oedivivc reniatnoc-oedivicoediv reniatnoxc-oediv@media (min-aspect-ratio: 16/9) {*/
+
+.fullscreen-bg__video {
+    height: 300%;
+    top: -100%;
 }
 
 
-/*** Elements ***/
-
+}
+@media (max-aspect-ratio: 16/9) {
+    .fullscreen-bg__video {
+        width: 300%;
+        left: -100%;
+    }
+}
+* {
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
 a {
     text-decoration: none;
 }
 
-
-/*** End Elements ***/
-
-
 /*** Video  ***/
-
 .homepage-hero-module {
     border-right: none;
     border-left: none;
     position: relative;
 }
-
 .no-video .video-container video,
 .touch .video-container video {
     display: none;
 }
-
 .no-video .video-container .poster,
 .touch .video-container .poster {
     display: block !important;
 }
-
 .video-container {
     position: relative;
     bottom: 0%;
@@ -41,36 +44,24 @@ a {
     overflow: hidden;
     background: #000;
 }
-
-.video-container .poster img {
-    width: 100%;
-    bottom: 0;
-    position: absolute;
-}
-
 .video-container {
     z-index: 100;
     position: absolute;
     background: rgba(0, 0, 0, 0.4);
     width: 100%;
 }
-
 .video-container video {
     position: absolute;
     z-index: 0;
     bottom: 0;
 }
-
 .video-container video.fillWidth {
     width: 100%;
 }
 
-
 /*** End Video ***/
 
-
 /*** Header and subtitle ***/
-
 .title-container {
     z-index: 1000;
     position: absolute;
@@ -78,145 +69,118 @@ a {
     top: 15%;
     width: 100%;
 }
-
 .filter {
     background: rgba(0, 0, 0, 0.5);
     padding: 2em 0 .25em;
 }
-
 .title {
     font-size: 4em;
     font-family: 'Barrio', cursive;
     margin: 0;
 }
-
 .subtitle {
     font-size: 1.7em;
     padding: 0 2em 0;
     margin: 1em 0;
 }
-
 .title,
 .subtitle,
 .fa-arrow-down {
     color: #ffc000;
 }
 
-
 /*** End header and subtitle ***/
 
-
 /*** Font Awesome ***/
-
 .fa-twitter-square,
 a:visited .fa-twitter-square {
     color: #0099CC;
 }
-
 .fa-arrow-down,
 .fa-twitter-square {
     font-size: 2em;
 }
-
 .fa-arrow-down {
     margin-top: .5em;
 }
-
 .fa-arrow-down:hover,
 .fa-github-alt:hover,
 .fa-linkedin-square:hover,
 .fa-twitter:hover {
     text-shadow: -1px 1px 8px #ffde79;
 }
-
 .fa-twitter-square:hover {
     text-shadow: 0px 0px 5px #9fffe7;
 }
-
 .fa-cutlery,
 .fa-github-alt {
     display: inline-block;
     margin: 0 .8em;
 }
 
-
 /*** End Font Awesome ***/
 
-
 /*** Taco Generator***/
-
 .wrapper {
-    width: 100%;
+    max-width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
-
 .wrapper h3 {
     text-align: center;
 }
-
-.fa-twitter-square {
-    margin-right: 3em;
+.buttonQuote {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    min-height: min-content;
 }
-
 #nextTacoButton {
-    font-size: 1.1em;
     border-radius: 5%;
     background-color: #4CAF50;
     border: none;
     color: white;
     padding: .5em 1em;
     font-size: 1.07em;
-    align-self: flex-end;
 }
-
 #nextTacoButton:active {
     background: #007004;
     outline: none;
 }
-
 .pContent {
-    padding: 0 2em;
+    margin: 0 auto;
+    width: 85%;
 }
-
 
 /*** End Taco Generator***/
 
-
 /*** Full Recipe ***/
-
 #recipeButton {
     display: block;
     margin: 0 auto;
     max-height: 8em;
 }
-
 #recipeButton:focus,
 #recipeButton:active,
 #recipeButton:focus:active {
     outline: none;
 }
-
 p#tacoP {
-    margin: 1.8em 0;
+    margin: 1.8em auto;
 }
-
 p.tacoFullRecipe {
     margin-top: 0;
+    margin-bottom: 8em;
 }
-
 
 /*** End Full Recipe ***/
 
-
 /*** Footer ***/
-
 .footerWrapper {
     margin-top: 3em;
 }
-
 footer {
     text-align: center;
     width: 100%;
@@ -227,11 +191,57 @@ footer {
     left: 0px;
     bottom: 0px
 }
-
 footer p,
 footer p a {
     color: #ffc000;
 }
 
-
 /*** End Footer ***/
+
+/*** Media Queries ***/
+@media only screen and (min-width: 480px) {
+    .buttonQuote {
+        justify-content: space-around;
+    }
+
+    .pContent {
+        width: 80%;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .title-container {
+        top: 45%;
+    }
+
+    .buttonQuote {
+        max-width: 70%;
+    }
+
+    p#tacoP {
+        max-width: 75%;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .title-container {
+        top: 35%;
+        width: 50%;
+        left: 25%;
+    }
+
+    .filter {
+        padding: 4em;
+        border-radius: .5em;
+    }
+
+    .buttonQuote {
+        max-width: 50%;
+    }
+
+    p#tacoP {
+        max-width: 50%;
+    }
+
+    .pContent {
+        max-width: 65%;
+    }
+}
