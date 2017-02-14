@@ -147,7 +147,7 @@ a:visited .fa-twitter-square {
     border: none;
     color: white;
     padding: .5em 1em;
-    font-size: 16px;
+    font-size: 1.07em;
 }
 
 #nextTacoButton:active {
@@ -157,4 +157,24 @@ a:visited .fa-twitter-square {
 
 .pContent {
     padding: 0 2em;
+    margin-bottom: 2.5em;
+}
+
+
+/** Full Recipe **/
+
+#recipeButton {
+    display: block;
+    margin: auto;
+    height: 8em;
+}
+
+#recipeButton:focus,
+#recipeButton:active,
+#recipeButton:focus:active {
+    outline: none;
+}
+
+p#tacoP {
+    margin: 1.8em 0;
 }
