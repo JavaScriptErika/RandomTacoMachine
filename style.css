@@ -171,6 +171,10 @@ a:visited .fa-twitter-square {
     width: 85%;
 }
 
+#tacoP p {
+    line-height: 1.5;
+}
+
 
 /*** End Taco Generator***/
 
