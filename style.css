@@ -79,13 +79,13 @@ a {
 }
 
 .subtitle {
+    color: #c89908;
     font-size: 1.7em;
     padding: 0 2em 0;
     margin: 1em 0;
 }
 
 .title,
-.subtitle,
 .fa-arrow-down {
     color: #ffc000;
 }
@@ -173,6 +173,7 @@ a:visited .fa-twitter-square {
 
 #tacoP p {
     line-height: 1.5;
+    font-size: 1.25em;
 }
 
 
