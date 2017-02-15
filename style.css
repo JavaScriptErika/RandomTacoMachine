@@ -70,6 +70,7 @@ a {
 .filter {
     background: rgba(0, 0, 0, 0.5);
     padding: 2em 0 .25em;
+
 }
 
 .title {
@@ -79,13 +80,23 @@ a {
 }
 
 .subtitle {
+    
+}
+
+.title {
+    font-size: 4em;
+    font-family: 'Barrio', cursive;
+    margin: 0;
+}
+
+.subtitle {
+    color: #c89908;
     font-size: 1.7em;
     padding: 0 2em 0;
     margin: 1em 0;
 }
 
 .title,
-.subtitle,
 .fa-arrow-down {
     color: #ffc000;
 }
@@ -173,6 +184,8 @@ a:visited .fa-twitter-square {
 
 #tacoP p {
     line-height: 1.5;
+    font-size: 1.25em;
+
 }
 
 
@@ -200,6 +213,10 @@ p#tacoP {
 p.tacoFullRecipe {
     margin-top: 0;
     margin-bottom: 8em;
+}
+
+p img {
+    max-width: 95%;
 }
 
 
@@ -232,6 +249,48 @@ p.tacoFullRecipe {
 #recipeButton:focus,
 #recipeButton:hover {
     animation-play-state: paused;
+}
+
+/** End Recipe Button Animation**/
+
+
+/*** Footer ***/
+
+.footerWrapper {
+    margin-top: 3em;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 3em;
+    background: #4a2916;
+    border-top: 2px solid #c68775;
+    position: fixed;
+    left: 0px;
+    bottom: 0px
+}
+
+footer p,
+footer p a {
+    color: #ffc000;
+}
+
+
+/*** End Footer ***/
+
+
+/*** Media Queries ***/
+
+@media only screen and (min-width: 480px) {
+    .buttonQuote {
+        justify-content: space-around;
+    }
+    .pContent {
+        width: 80%;
+    }
+}
+
 }
 
 
@@ -307,3 +366,6 @@ footer p a {
         max-width: 65%;
     }
 }
+
+}
+
