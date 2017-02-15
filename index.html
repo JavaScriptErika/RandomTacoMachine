@@ -6,26 +6,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Random Taco Machine</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barrio|Open+Sans">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
 
   <body>
-    <div class="wrapper">
-      <h1>Random Taco Machine</h1>
-      <h3>Because every night is taco night</h3>
-      <div class="buttonQuote">
-        <a id="twitterButton">Tweet</a>
-        <button id="nextTacoButton">Next Taco</button>
-      </div>
-      <div class="tacoContainer" id="tacoDiv">
-        <p id="tacoP" class="pContent">
-        </p>
-        <button id="recipeButton">Show Me</button>
-        <p id="tacoFull" class="pContent">
-        </p>
+    <!-- video -->
+    <div class="homepage-hero-module">
+      <div class="video-container">
+        <div class="title-container">
+          <div class="filter">
+            <h1 class="title">Random Taco Machine</h1>
+          </div>
+          <!-- end filter -->
+          <a href="#tacoGenerator"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
+        </div>
+        <!-- end title-container -->
+        <video autoplay loop class="fillWidth">
+            <source src="video/MP4/Indoor-Market.mp4" type="video/mp4" />Your browser does not support the video tag. Please upgrade your browser.
+            <source src="video/WEBM/Indoor-Market.webm" type="video/webm" />Your browser does not support the video tag. Please upgrade your browser.
+            <source src="video/OGV/Indoor-Market.ogv" type="video/ogv" />Your browser does not support the video tag. Please upgrade your browser.
+        </video>
       </div>
     </div>
+    </div>
+    <div id="tacoGenerator" class="wrapper">
+      <h3 class="subtitle">Because every night is taco night</h3>
+      <div class="buttonQuote">
+        <a id="twitterButton" target="_blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
+        <button id="nextTacoButton">Next Taco</button>
+      </div>
+      <div class="pContent">
+        <p id="tacoP"></p>
+        <input type="image" src="img/vector_taco_recipe.png" id="recipeButton" />
+        <p id="tacoFull" class="tacoFullRecipe">
+        </p>
+      </div>
+
+    </div>
     <!-- end wrapper -->
+    <footer>
+      <p> Made with <i class="fa fa-cutlery" aria-hidden="true"></i> by Erika <a href="https://github.com/JavaScriptErika/RandomTacoMachine" target="_blank"><i class="fa fa-github-alt" aria-hidden="true"></i></a> <a href="https://twitter.com/JavaScriptErika"
+            target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a></p>
+    </footer>
 
 
 
@@ -33,6 +58,7 @@
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.6.0/dist/showdown.min.js"></script>
     <script src="app.js"></script>
+    <script src="video.js"></script>
   </body>
 
 </html>
