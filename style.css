@@ -1,41 +1,309 @@
 * {
     box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
 }
+
+a {
+    text-decoration: none;
+}
+
+
+/*** Video  ***/
+
+.homepage-hero-module {
+    border-right: none;
+    border-left: none;
+    position: relative;
+}
+
+.no-video .video-container video,
+.touch .video-container video {
+    display: none;
+}
+
+.no-video .video-container,
+.touch .video-container {
+    display: block !important;
+}
+
+.video-container {
+    position: relative;
+    bottom: 0%;
+    left: 0%;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    background: #000;
+}
+
+.video-container {
+    z-index: 100;
+    position: absolute;
+    background: rgb(0, 0, 0);
+    width: 100%;
+}
+
+.video-container video {
+    position: absolute;
+    z-index: 0;
+    bottom: 0;
+}
+
+.video-container video.fillWidth {
+    width: 100%;
+}
+
+
+/*** End Video ***/
+
+
+/*** Header and subtitle ***/
+
+.title-container {
+    z-index: 1000;
+    position: absolute;
+    text-align: center;
+    top: 15%;
+    width: 100%;
+}
+
+.filter {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 2em 0 .25em;
+}
+
+.title {
+    font-size: 4em;
+    font-family: 'Barrio', cursive;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 1.7em;
+    padding: 0 2em 0;
+    margin: 1em 0;
+}
+
+.title,
+.subtitle,
+.fa-arrow-down {
+    color: #ffc000;
+}
+
+
+/*** End header and subtitle ***/
+
+
+/*** Font Awesome ***/
+
+.fa-twitter-square,
+a:visited .fa-twitter-square {
+    color: #0099CC;
+}
+
+.fa-arrow-down,
+.fa-twitter-square {
+    font-size: 2em;
+}
+
+.fa-arrow-down {
+    margin-top: .5em;
+}
+
+.fa-arrow-down:hover,
+.fa-github-alt:hover,
+.fa-linkedin-square:hover,
+.fa-twitter:hover {
+    text-shadow: -1px 1px 8px #ffde79;
+}
+
+.fa-twitter-square:hover {
+    text-shadow: 0px 0px 5px #9fffe7;
+}
+
+.fa-cutlery,
+.fa-github-alt {
+    display: inline-block;
+    margin: 0 .8em;
+}
+
+
+/*** End Font Awesome ***/
+
+
+/*** Taco Generator***/
 
 .wrapper {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-}
-
-h1 {
-    text-align: center;
-}
-
-.tacoContainer {
+    max-width: 100%;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    background-color: peachpuff;
-    width: 90vw;
-    margin: 0 auto;
-    padding: 1em;
 }
 
-.pContent {
-    display: inline-block;
-    width: 90%;
-    /*align-self: center;*/
+.wrapper h3 {
+    text-align: center;
 }
 
 .buttonQuote {
     display: flex;
-    justify-content: space-around;
+    width: 80%;
+    justify-content: space-between;
+    min-height: min-content;
 }
 
-#nextQuote {
-    font-size: 1.1em;
+#nextTacoButton {
+    border-radius: 5%;
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: .5em 1em;
+    font-size: 1.07em;
 }
 
-//image to include :https://unsplash.com/photos/qX9Ie7ieb1E
+#nextTacoButton:active {
+    background: #007004;
+    outline: none;
+}
+
+.pContent {
+    margin: 0 auto;
+    width: 85%;
+}
+
+#tacoP p {
+    line-height: 1.5;
+}
+
+
+/*** End Taco Generator***/
+
+
+/*** Full Recipe ***/
+
+#recipeButton {
+    display: block;
+    margin: 0 auto;
+    max-height: 8em;
+}
+
+#recipeButton:focus,
+#recipeButton:active,
+#recipeButton:focus:active {
+    outline: none;
+}
+
+p#tacoP {
+    margin: 1.8em auto;
+}
+
+p.tacoFullRecipe {
+    margin-top: 0;
+    margin-bottom: 8em;
+}
+
+
+/*** End Full Recipe ***/
+
+
+/** Recipe Button Animation **/
+
+#recipeButton {
+    transform: translate3d(0, 0, 0);
+    animation: shake 2s infinite;
+}
+
+@keyframes shake {
+    20%,
+    80% {
+        transform: translate3d(0, 0, 0);
+    }
+    30%,
+    50%,
+    70% {
+        transform: translate3d(-2px, 0, 0);
+    }
+    40%,
+    60% {
+        transform: translate3d(2px, 0, 0);
+    }
+}
+
+#recipeButton:focus,
+#recipeButton:hover {
+    animation-play-state: paused;
+}
+
+
+/** End Recipe Button Animation**/
+
+
+/*** Footer ***/
+
+.footerWrapper {
+    margin-top: 3em;
+}
+
+footer {
+    text-align: center;
+    width: 100%;
+    height: 3em;
+    background: #4a2916;
+    border-top: 2px solid #c68775;
+    position: fixed;
+    left: 0px;
+    bottom: 0px
+}
+
+footer p,
+footer p a {
+    color: #ffc000;
+}
+
+
+/*** End Footer ***/
+
+
+/*** Media Queries ***/
+
+@media only screen and (min-width: 480px) {
+    .buttonQuote {
+        justify-content: space-around;
+    }
+    .pContent {
+        width: 80%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .title-container {
+        top: 45%;
+    }
+    .buttonQuote {
+        max-width: 70%;
+    }
+    p#tacoP {
+        max-width: 75%;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    .title-container {
+        top: 35%;
+        width: 50%;
+        left: 25%;
+    }
+    .filter {
+        padding: 4em;
+        border-radius: .5em;
+    }
+    .buttonQuote {
+        max-width: 50%;
+    }
+    p#tacoP {
+        max-width: 50%;
+    }
+    .pContent {
+        max-width: 65%;
+    }
+}
