@@ -3,12 +3,12 @@ $( document ).ready(function() {
 
     scaleVideoContainer();
 
-    initBannerVideoSize('.video-container');
+    initBannerVideoSize('.video-container .poster img');
     initBannerVideoSize('.video-container video');
 
     $(window).on('resize', function() {
         scaleVideoContainer();
-        scaleBannerVideoSize('.video-container');
+        scaleBannerVideoSize('.video-container .poster img');
         scaleBannerVideoSize('.video-container video');
     });
 
