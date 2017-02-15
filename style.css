@@ -202,6 +202,10 @@ p.tacoFullRecipe {
     margin-bottom: 8em;
 }
 
+p img {
+    max-width: 95%;
+}
+
 
 /*** End Full Recipe ***/
 
@@ -306,4 +310,7 @@ footer p a {
     .pContent {
         max-width: 65%;
     }
+}
+
+
 }
