@@ -1,4 +1,4 @@
-const tacoAPI = "http://taco-randomizer.herokuapp.com/random/";
+const tacoAPI = "https://taco-randomizer.herokuapp.com/random/";
 //empty object initialized so when JSON object is returned, can be accessed globally
 let tacoObject = {};
 //element id is selected for full description of the recipe
