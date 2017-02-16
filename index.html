@@ -13,25 +13,17 @@
   </head>
 
   <body>
-    <!-- video -->
-    <div class="homepage-hero-module">
-      <div class="video-container">
-        <div class="title-container">
-          <div class="filter">
-            <h1 class="title">Random Taco Machine</h1>
-          </div>
-          <!-- end filter -->
-          <a href="#tacoGenerator"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
-        </div>
-        <!-- end title-container -->
-        <video autoplay loop class="fillWidth" poster="img/Indoor-Market.jpg">
-            <source src="video/MP4/Indoor-Market.mp4" type="video/mp4" />Your browser does not support the video tag. Please upgrade your browser.
-            <source src="video/WEBM/Indoor-Market.webm" type="video/webm" />Your browser does not support the video tag. Please upgrade your browser.
-            <source src="video/OGV/Indoor-Market.ogv" type="video/ogv" />Your browser does not support the video tag. Please upgrade your browser.
-        </video>
+    <div class="video-block" data-vide-bg="video/Indoor-Market" data-vide-options="position: 0% 50%">
+    <div class="title-container">
+      <div class="filter">
+        <h1 class="title">Random Taco Machine</h1>
       </div>
+      <!-- end filter -->
+      <a href="#tacoGenerator"><i class="fa fa-arrow-down" aria-hidden="true"></i></a>
     </div>
-    </div>
+    <!-- end title-container -->
+  </div>
+    <!-- end video-block -->
     <div class="wrapper">
       <h3 id="tacoGenerator" class="subtitle">Because every night is taco night</h3>
       <div class="buttonQuote">
@@ -57,8 +49,8 @@
 
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
     <script src="https://cdn.rawgit.com/showdownjs/showdown/1.6.0/dist/showdown.min.js"></script>
+    <script src="jQuery/dist/jquery.vide.min.js"></script>
     <script src="app.js"></script>
-    <script src="video.js"></script>
   </body>
 
 </html>

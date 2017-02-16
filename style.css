@@ -10,47 +10,9 @@ a {
 
 /*** Video  ***/
 
-.homepage-hero-module {
-    border-right: none;
-    border-left: none;
-    position: relative;
-}
-
-.no-video .video-container video,
-.touch .video-container video {
-    display: none;
-}
-
-.no-video .video-container,
-.touch .video-container {
-    display: block !important;
-}
-
-.video-container {
-    position: relative;
-    bottom: 0%;
-    left: 0%;
-    height: 100%;
+.video-block {
     width: 100%;
-    overflow: hidden;
-    background: #000;
-}
-
-.video-container {
-    z-index: 100;
-    position: absolute;
-    background: rgb(0, 0, 0);
-    width: 100%;
-}
-
-.video-container video {
-    position: absolute;
-    z-index: 0;
-    bottom: 0;
-}
-
-.video-container video.fillWidth {
-    width: 100%;
+    height: 100vh;
 }
 
 
