@@ -5,6 +5,7 @@
 
 body {
     margin-bottom: 4em;
+    -webkit-transform: translate3d(0, 0, 0);
 }
 
 a {
@@ -174,6 +175,8 @@ p img {
 /** #nextTaco Animation **/
 
 #nextTaco {
+    -webkit-backface-visibility: hidden;
+    -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
     animation: shake 2s infinite;
 }
@@ -181,15 +184,18 @@ p img {
 @keyframes shake {
     20%,
     80% {
+        -webkit-transform: translate3d(0, 0, 0);
         transform: translate3d(0, 0, 0);
     }
     30%,
     50%,
     70% {
+        -webkit-transform: translate3d(-2px, 0, 0);
         transform: translate3d(-2px, 0, 0);
     }
     40%,
     60% {
+        -webkit-transform: translate3d(2px, 0, 0);
         transform: translate3d(2px, 0, 0);
     }
 }
