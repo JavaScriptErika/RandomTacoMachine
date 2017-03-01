@@ -1,5 +1,5 @@
 const tacoAPI = "https://taco-randomizer.herokuapp.com/random/",
-		 $nextTaco = $('#nextTacoButton');
+		 $nextTaco = $('#nextTaco');
 //empty object initialized so when JSON object is returned, can be accessed globally
 let tacoObject = {},
 		$tacoFull = $('#tacoFull'),

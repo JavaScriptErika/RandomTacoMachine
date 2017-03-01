@@ -50,7 +50,7 @@ a {
     color: #c89908;
     font-size: 1.5em;
     padding: .5em 2em 0;
-    margin: 1em 0;
+    margin: 1.75em 0;
 }
 
 .title,
@@ -113,25 +113,12 @@ a:visited .fa-twitter-square {
     text-align: center;
 }
 
-.buttonQuote {
+.buttonHeader {
     display: flex;
     width: 80%;
     justify-content: space-between;
+    align-items: center;
     min-height: min-content;
-}
-
-#nextTacoButton {
-    border-radius: 5%;
-    background-color: #4CAF50;
-    border: none;
-    color: white;
-    padding: .5em 1em;
-    font-size: 1.07em;
-}
-
-#nextTacoButton:active {
-    background: #007004;
-    outline: none;
 }
 
 .pContent {
@@ -150,16 +137,12 @@ a:visited .fa-twitter-square {
 
 /*** Full Recipe ***/
 
-#recipeButton {
-    display: block;
-    margin: -1.5em auto 0;
-    max-height: 7em;
+#nextTaco {
+    max-height: 4.5em;
 }
 
-#recipeButton:focus,
-#recipeButton:active,
-#recipeButton:focus:active {
-    outline: none;
+#nextTaco:focus {
+    outline: 0;
 }
 
 p#tacoP {
@@ -179,9 +162,9 @@ p img {
 /*** End Full Recipe ***/
 
 
-/** Recipe Button Animation **/
+/** #nextTaco Animation **/
 
-#recipeButton {
+#nextTaco {
     transform: translate3d(0, 0, 0);
     animation: shake 2s infinite;
 }
@@ -202,8 +185,8 @@ p img {
     }
 }
 
-#recipeButton:focus,
-#recipeButton:hover {
+#nextTaco:focus,
+#nextTaco:hover {
     animation-play-state: paused;
 }
 
@@ -240,7 +223,7 @@ footer p a {
 /*** Media Queries ***/
 
 @media only screen and (min-width: 480px) {
-    .buttonQuote {
+    .buttonHeader {
         justify-content: space-around;
     }
     .pContent {
@@ -252,14 +235,13 @@ footer p a {
     .wrapper {
         min-height: 100vh;
     }
-    #recipeButton {
-        margin: 0 auto;
-        max-height: 8em;
+    #nextTaco {
+        max-height: 6em;
     }
     .title-container {
         top: 45%;
     }
-    .buttonQuote {
+    .buttonHeader {
         max-width: 70%;
     }
     p#tacoP {
@@ -278,7 +260,7 @@ footer p a {
         padding: 4em;
         border-radius: .5em;
     }
-    .buttonQuote {
+    .buttonHeader {
         max-width: 50%;
     }
     p#tacoP {
