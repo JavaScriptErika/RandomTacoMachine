@@ -44,13 +44,7 @@ a {
 }
 
 .title {
-    font-size: 4em;
-    font-family: 'Barrio', cursive;
-    margin: 0;
-}
-
-.title {
-    font-size: 4em;
+    font-size: 3em;
     font-family: 'Barrio', cursive;
     margin: 0;
 }
@@ -58,8 +52,7 @@ a {
 .subtitle {
     color: #c89908;
     font-size: 1.5em;
-    padding: .5em 2em 0;
-    margin: 1.75em 0;
+    margin: 1em 0;
 }
 
 .recipeTitle {
@@ -124,7 +117,12 @@ a:visited .fa-twitter-square {
     align-items: center;
 }
 
-.wrapper h3 {
+.wrapper .subtitle {
+    padding: 0 .4em;
+    text-align: center;
+}
+
+.wrapper .recipeTitle {
     text-align: left;
 }
 
@@ -262,6 +260,9 @@ footer p a {
 }
 
 @media only screen and (min-width: 768px) {
+    .title {
+        font-size: 4em;
+    }
     .wrapper {
         min-height: 100vh;
     }
