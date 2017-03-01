@@ -10,7 +10,7 @@ let tacoObject = {},
 const tacoSummary = data => {
 	tacoObject = data;
 	let fullRecipe = "",
-			tacoDescription = `<strong>Topped off with:</strong> <em>${tacoObject.mixin.name}</em> and <em>${tacoObject.condiment.name}</em>, feast upon a mighty taco packed with <em>${tacoObject.base_layer.name}</em> and the flavors of <em>${tacoObject.seasoning.name}</em>! Best part? It's all tucked away in <em>${tacoObject.shell.name}</em>.`;
+			tacoDescription = `<strong>Feast upon a mighty taco packed with:</strong> <em>${tacoObject.base_layer.name}</em> and the flavors of <em>${tacoObject.seasoning.name}</em>. Top it off with beastly gobs of <em>${tacoObject.mixin.name}</em> and <em>${tacoObject.condiment.name}</em>. Be responsible and stuff your fillings in some <em>${tacoObject.shell.name}</em>.`;
 
 	$.each(tacoObject, function () {
 		fullRecipe += this.recipe + '\n\n---\n';

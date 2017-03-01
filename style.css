@@ -3,6 +3,10 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+body {
+    margin-bottom: 4em;
+}
+
 a {
     text-decoration: none;
 }
@@ -51,6 +55,11 @@ a {
     font-size: 1.5em;
     padding: .5em 2em 0;
     margin: 1.75em 0;
+}
+
+.recipeTitle {
+    padding: 0;
+    font-size: 2em;
 }
 
 .title,
@@ -103,14 +112,14 @@ a:visited .fa-twitter-square {
 
 .wrapper {
     max-width: 100%;
-    min-height: calc(100vh + 10em);
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .wrapper h3 {
-    text-align: center;
+    text-align: left;
 }
 
 .buttonHeader {
@@ -119,6 +128,14 @@ a:visited .fa-twitter-square {
     justify-content: space-between;
     align-items: center;
     min-height: min-content;
+}
+
+#nextTaco {
+    max-height: 4.5em;
+}
+
+#nextTaco:focus {
+    outline: 0;
 }
 
 .pContent {
@@ -136,14 +153,6 @@ a:visited .fa-twitter-square {
 
 
 /*** Full Recipe ***/
-
-#nextTaco {
-    max-height: 4.5em;
-}
-
-#nextTaco:focus {
-    outline: 0;
-}
 
 p#tacoP {
     margin: 1.8em auto;
@@ -239,7 +248,7 @@ footer p a {
         max-height: 6em;
     }
     .title-container {
-        top: 45%;
+        top: 25%;
     }
     .buttonHeader {
         max-width: 70%;
