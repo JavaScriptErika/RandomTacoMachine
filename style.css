@@ -4,8 +4,12 @@
 }
 
 body {
-    margin-bottom: 4em;
     -webkit-transform: translate3d(0, 0, 0);
+}
+
+body,
+html {
+    height: 100%;
 }
 
 a {
@@ -113,7 +117,8 @@ a:visited .fa-twitter-square {
 
 .wrapper {
     max-width: 100%;
-    min-height: 100vh;
+    min-height: 100%;
+    margin-bottom: -3em;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -121,6 +126,11 @@ a:visited .fa-twitter-square {
 
 .wrapper h3 {
     text-align: left;
+}
+
+.wrapper:after {
+    content: "";
+    display: block;
 }
 
 .buttonHeader {
@@ -218,12 +228,17 @@ p img {
 footer {
     text-align: center;
     width: 100%;
-    height: 3em;
     background: #4a2916;
     border-top: 2px solid #c68775;
-    position: fixed;
-    left: 0px;
-    bottom: 0px
+}
+
+footer,
+.wrapper:after {
+    height: 3em;
+}
+
+footer p {
+    margin-bottom: 0;
 }
 
 footer p,
